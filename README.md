@@ -1,2 +1,2 @@
 ## 🚀 View Live Demo  
-[View Live Demo](https://amandafeliciangwenya-stack.github.io/Sentiment-Analyzer)
+[View Live Demo](https://logic-league.github.io/Logic-League-Sentiment-Analyzer/)
