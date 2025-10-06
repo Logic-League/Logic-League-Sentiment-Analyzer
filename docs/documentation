@@ -1,0 +1,101 @@
+                                         Logic League
+ 
+ 
+Project Overview
+The Sentiment Analysis Dashboard is an interactive web application built using Trickle. It allows users to analyze the emotional tone of text data, providing insights into customer feedback, social media posts, and other textual content. The system classifies text into positive, negative, or neutral sentiments, provides confidence scores, extracts sentiment-driving keywords, and visualizes results for easy interpretation.
+________________________________________
+2. Features
+1.	Text Input
+o	Direct text entry via input box
+o	Select the Load sample texts for analysing 
+o	File upload (CSV, TXT) for batch processing
+2.	Sentiment Classification
+o	Multi-class classification: positive, negative, neutral
+o	Confidence scoring for each prediction
+o	Batch processing for multiple texts
+3.	Keyword Extraction
+o	Highlights key terms influencing sentiment
+o	Helps users understand the drivers behind sentiment scores
+4.	Visualization
+o	Interactive charts showing sentiment distribution
+o	Comparative analysis across multiple datasets
+5.	Export Options
+o	Download analysis results in CSV, JSON, or PDF formats
+6.	Explanations
+o	Shows reasoning behind sentiment predictions
+o	Provides insights for ambiguous or mixed sentiments
+7.	Bulk Analysis
+o	A user can insert multiple texts to analyse at once 
+8.	Comparative Analysis
+o	A user can compare texts, e.g., “I absolutely love this new product! The quality is outstanding, and the customer service was exceptional. Best purchase I've made this year!” and “This experience was terrible and disappointing. The service was incredibly slow, staff seemed uninterested in helping, and I felt completely ignore.”
+
+
+________________________________________
+3. Technical Details
+•	Platform: Trickle (no-code platform for web apps and dashboards)
+•	NLP Integration: Built-in AI sentiment analysis module (Hugging Face API)
+•	Data Handling: Supports manual input and batch file upload
+•	Visualizations: Interactive pie and bar charts for sentiment distribution
+•	Error Handling: Checks for invalid inputs and API failures
+•	Export: Enables downloading of processed results in multiple formats. 
+________________________________________
+4. User Guide
+1.	Navigate to the dashboard via the project link.
+2.	Single Text Analysis:
+o	Enter text in the input box and click Analyze.
+ 
+o	View sentiment classification, confidence score, and keyword highlights.
+ 
+3.	Bulk Analysis:
+o	Upload a CSV or TXT file with multiple texts.
+o	Click Analyze to process all texts.
+ 
+ 
+4.	Visualizations:
+o	Explore the charts for sentiment distribution and comparisons.
+View Analysis Explanation:
+  
+
+Tabulated Analysis Overview:
+ 
+
+
+
+5.	Export Results:
+o	Click on the export button to download results in CSV, JSON, or PDF format.
+ 
+ 
+6.	Sentiment Distribution, Emotion Profile and Sentiment Timeline
+ 
+________________________________________
+5. Accuracy & Limitations
+•	Accuracy: Achieved high correlation with manual analysis on a sample of 50 texts.
+•	Limitations:
+o	May misclassify sarcastic or context-dependent phrases
+o	Works best for English text; other languages may have reduced accuracy
+o	Confidence scores indicate prediction certainty but are not absolute
+________________________________________
+ 
+6. Implementation Challenges
+•	Handling bulk uploads and ensuring efficient processing
+•	Providing meaningful keyword extraction for diverse texts
+•	Balancing user-friendly interface with advanced AI features
+•	Handling large text inputs: Ensuring the API processes text up to 2000 characters efficiently
+•	Integrating charts: Visualizing sentiment distribution and emotion breakdowns with Chart.js
+•	Maintaining a responsive UI: Ensuring the interface works on both desktop and mobile with smooth animations
+•	API rate limits: Managing requests to Hugging Face API to avoid exceeding limits during demos
+•	State management in React: Keeping analysis history, current results, and charts synchronized using hooks and local state
+________________________________________
+7. API Selection Justification
+The Sentiment Analyzer uses the Hugging Face API for sentiment and emotion analysis. The Hugging Face API was chosen because it:
+•	Provides state-of-the-art NLP models for sentiment and emotion classification
+•	Offers accurate and granular sentiment scoring (positive, negative, neutral)
+•	Supports detailed emotion detection, including joy, sadness, anger, fear, surprise, and trust
+•	Is easy to integrate with React and modern web frameworks
+•	Enables real-time analysis, which is critical for an interactive web application
+This ensures that both sentiment scores and emotion breakdowns are reliable and fast across different text inputs.
+________________________________________
+ Conclusion
+The Sentiment Analyzer is a modern, AI-powered web application designed to provide insightful sentiment and emotion analysis for text data. By leveraging the Hugging Face API, it delivers accurate, real-time results that can help businesses, researchers, and individuals better understand customer feedback, social media content, and textual data trends. With its interactive charts, history tracking, and clean UI, the application is both user-friendly and powerful, making it a practical tool for analytics, content moderation, market research, and customer support optimization.
+
+
