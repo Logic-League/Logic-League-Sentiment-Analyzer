@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Replace the title with your desired title -->
+    <title>Sentiment Analyzer - Text Emotion Analysis Dashboard</title>
+
+    <!-- Add description, keywords, and other metadata -->
+    <meta name="description" content="Interactive dashboard for analyzing sentiment and emotional tone in text data, customer reviews, and social media posts">
+    <meta name="keywords" content="sentiment analysis, text analysis, emotion detection, dashboard, customer feedback">
+    <meta property="og:title" content="Sentiment Analyzer - Text Emotion Analysis Dashboard">
+    <meta property="og:description" content="Interactive dashboard for analyzing sentiment and emotional tone in text data">
+    <meta name="twitter:title" content="Sentiment Analyzer Dashboard">
+    <meta name="twitter:description" content="Analyze emotional tone in text content with real-time insights">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    
+    <script>
+        // Initialize ChartJS globally to prevent redeclaration
+        window.ChartJS = window.Chart;
+    </script>
+
+    <!-- Predefined Tailwind CSS, use it as needed, or update base on your -->
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #f1f5f9;
+            --accent-color: #10b981;
+            --purple-accent: #8b5cf6;
+            --purple-light: #f3f4f6;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --purple-gradient: linear-gradient(135deg, #a855f7 0%, #3b82f6 50%, #8b5cf6 100%);
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--secondary-color);
+            color: var(--text-primary);
+        }
+        
+        h1, h2, h3 {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+    }
+
+    @layer components {
+        .card {
+            @apply bg-white rounded-xl shadow-sm border border-[var(--border-color)] p-6;
+        }
+        
+        .btn {
+            @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+        }
+        
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white hover:bg-blue-700 focus:ring-blue-500;
+        }
+        
+        .btn-secondary {
+            @apply bg-gray-100 text-gray-700 hover:bg-gray-200 focus:ring-gray-500;
+        }
+        
+        .sentiment-positive {
+            @apply text-green-600 bg-green-50 border-green-200;
+        }
+        
+        .sentiment-negative {
+            @apply text-red-600 bg-red-50 border-red-200;
+        }
+        
+        .sentiment-neutral {
+            @apply text-gray-600 bg-gray-50 border-gray-200;
+        }
+        
+        .gradient-bg {
+            background: var(--bg-gradient);
+        }
+    }
+
+    @layer utilities {
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/TextInput.js"></script>
+    <script type="text/babel" src="components/BulkTextInput.js"></script>
+    <script type="text/babel" src="components/SentimentResult.js"></script>
+    <script type="text/babel" src="components/AnalyticsChart.js"></script>
+    <script type="text/babel" src="components/HistoryPanel.js"></script>
+    <script type="text/babel" src="components/ComparisonView.js"></script>
+    <script type="text/babel" src="components/ExplanationPanel.js"></script>
+    <script type="text/babel" src="components/ExportTools.js"></script>
+    <script type="text/babel" src="components/VisualizationDashboard.js"></script>
+    <script type="text/babel" src="components/AnalysisResultsTable.js"></script>
+    <script type="text/babel" src="utils/sentimentAnalyzer.js"></script>
+    <script type="text/babel" src="utils/exportUtils.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
